@@ -1,6 +1,8 @@
 # Image Generation Machine Learning Model for Chess Piece Classification using the Image Data Set:
  **Data-set** https://www.kaggle.com/datasets/niteshfre/chessman-image-dataset
+
  **Google Drive Link:** https://drive.google.com/drive/folders/1VBTOCduA1bPF0c9Rur5MYaoxbF5m9y0L?usp=sharing
+
 **Written By:** Alejandro Ruiz Garcia Rojas
 
 ## Selected Data Set
