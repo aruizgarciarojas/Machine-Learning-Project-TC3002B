@@ -62,8 +62,11 @@ WIP
 
 ## References
 [1] R. Dunford "The Pareto Principle" *Plymouth*,2014 Available: https://pearl.plymouth.ac.uk/bitstream/handle/10026.1/14054/TPSS-2014-Vol7n1_140-148Dunford.pdf?sequence=1&isAllowed=y [Accessed May 17,2024]
+
 [2]J. Filter "splitfolders" 2022 Available: https://pypi.org/project/split-folders/ [Accessed May 17,2024]
+
 [3] "What Is Data Augmentation?" *Amazon Web Services*, 2024 Available: https://aws.amazon.com/what-is/data-augmentation/#:~:text=Data%20augmentation%20is%20the%20process,machine%20learning%20(ML)%20models. [Accessed May 17,2024]
+
 [4] "Tensorflow API Documentation" *Tensorflow* Available: https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator#flow_from_directory [Accessed May 17, 2024]
 
 
