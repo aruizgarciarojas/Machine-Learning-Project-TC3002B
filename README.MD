@@ -78,7 +78,7 @@ For our Initial Model we can observe that because it's complexity is rather simp
 
 For our VGG16 Model we can observe that our model is indeed doing *overfitting* as the values from our training data are nearly perfect, while our validation values remain on a lower side. Having a difference of At-least 15% in it's accuracy value. And atleast a 30% Difference in loss value, we can notice that our model is training too well within the training data, but when put with real data it struggles to make accurate judgements.
 
-![LossVG](Images/VGG16LOSS.png0)
+![LossVG](Images/VGG16LOSS.png)
 ![AccVG](Images/VGG16ACC.png)
 
 Finally our Xception model can also be considered an Overfitted Model, as on average we see a difference between our Training data and Validation Data of 12%.
