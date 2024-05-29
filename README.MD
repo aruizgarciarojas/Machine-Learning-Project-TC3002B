@@ -1,6 +1,8 @@
 # Image Generation Machine Learning Model for Chess Piece Classification using the Image Data Set:
  **Data-set** https://www.kaggle.com/datasets/niteshfre/chessman-image-dataset
+
  **Google Drive Link:** https://drive.google.com/drive/folders/1VBTOCduA1bPF0c9Rur5MYaoxbF5m9y0L?usp=sharing
+
 **Written By:** Alejandro Ruiz Garcia Rojas
 
 ## Selected Data Set
@@ -95,8 +97,11 @@ When using our Xception Model we generate A confusion Matrix of:
 
 ## References
 [1] R. Dunford "The Pareto Principle" *Plymouth*,2014 Available: https://pearl.plymouth.ac.uk/bitstream/handle/10026.1/14054/TPSS-2014-Vol7n1_140-148Dunford.pdf?sequence=1&isAllowed=y [Accessed May 17,2024]
+
 [2]J. Filter "splitfolders" 2022 Available: https://pypi.org/project/split-folders/ [Accessed May 17,2024]
+
 [3] "What Is Data Augmentation?" *Amazon Web Services*, 2024 Available: https://aws.amazon.com/what-is/data-augmentation/#:~:text=Data%20augmentation%20is%20the%20process,machine%20learning%20(ML)%20models. [Accessed May 17,2024]
+
 [4] "Tensorflow API Documentation" *Tensorflow* Available: https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator#flow_from_directory [Accessed May 17, 2024]
 [5] A. Badhri, K. El Moutaoikil, I. Badi, "A combined CNN and LSH for fast plant species classification" Jan 2020,Available: https://dl.acm.org/doi/10.1145/3372938.3372974 [Accessed May 27,2024]
 [6]A. N. Hermana, D. Rosmala, M. G. Husada,"Transfer Learning for Classification of Fruit Ripeness Using VGG16" June 2021 Available:https://dl.acm.org/doi/10.1145/3450588.3450943[Accessed May 27,2024]
