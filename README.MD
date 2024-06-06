@@ -75,17 +75,36 @@ For the calculation of our loss we utilize `Categorical cross-entropy`.
 Categorical cross-entropy was chosen as the loss function for this chess piece classification project because it is specifically designed for multi-class classification tasks.  Categorical cross-entropy works by measuring the difference between the true distribution of the labels (the actual class of each image) and the predicted probability distribution output by the model. This loss function effectively penalizes incorrect predictions, especially when the model is highly confident about an incorrect class, thus guiding the model to improve its accuracy over successive training epochs.
 
 For our Initial Model we can observe that because it's complexity is rather simple, we are experiencing a severe case of underfitting, where the values do not go past 0.20 for the accuracy on either of our data-sets. (Train and Validation.) Respectively, we can observe that the loss function's result remains at a high number.
+![LossIni](Images/INITIALMODELLOSS.png)
+![AccIni](Images/INITIALMODELACC.png)
+![ResuIni](Images/INITIALMODELRESU.png)
+
+Additionally, taking into account metrics such as Precision, Recall and the F1 score, we can notice that model is inefficient in correctly classifying pieces. The prediction indicates that the model indicates correctly only 45% of the time. Meaning it classifies pieces correctly only half of the time. Our recall indicates that out of all the images the model was given it was only able to properly clasify 39% of them. Finally, our F1 score being a mix of the two and helping with an inbalance of data indicates that the model is only 36% Robust.
 
 For our VGG16 Model we can observe that our model is indeed doing *overfitting* as the values from our training data are nearly perfect, while our validation values remain on a lower side. Having a difference of At-least 15% in it's accuracy value. And atleast a 30% Difference in loss value, we can notice that our model is training too well within the training data, but when put with real data it struggles to make accurate judgements.
 
 ![LossVG](Images/VGG16LOSS.png)
 ![AccVG](Images/VGG16ACC.png)
+![ResuVG](Images/VGG16RESU.png)
+
+Taking into account Recall,Precision and F1 Score for this model, we get the following results:
+Our Precision Indicates that the model was able to identify 70% of the images it classified under the classes it did correctly. While the Recall indicates that it was only able to correctly clasify 67% of the images it was given. Finally the F1 score indicates the model is only 68% Robust.
 
 Finally our Xception model can also be considered an Overfitted Model, as on average we see a difference between our Training data and Validation Data of 12%.
 
-Finally, we procure a Confusion Matrix for Each model so we can observe which types of errors our model is falling victim to, each time it does a classification. It can give us quite a lot of information regarding our model, and can provide what needs to be tuned for better results.
+![LossXc](Images/XceptionLoss.png)
+![AccXc](Images/XceptionACC.png)
+![ResuXc](Images/XCEPTIONRESU.png)
+
+Same as before, we analyze the Recall, Precision and F1 to find that:
+The model is able to identify classify pieces correctly 71% of the time correctly when it classifies under a specific class. The Recall indicates out of all the pieces it was only able to correctly classify 73% of them correctly. And finally our F1 score indicates our model has a robustness of 73%, this one being our best performing model
+
+We then procure a Confusion Matrix for Each model so we can observe which types of errors our model is falling victim to, each time it does a classification. It can give us quite a lot of information regarding our model, and can provide what needs to be tuned for better results.
 
 When using our initial Model we generate A Confusion Matrix of:
+The model demonstrates high accuracy only when it comes to classifying pieces like Knights, but struggles to clasify any other class, as it distirbutes most of them in other pieces. For example, looking at Queen, it often marks them as bishops or Rooks and very few times does it clasify them as actual queens. Same with bishops often being confused as Kings as well. 
+
+![InitialConf](Images/INITIALMODELCONFMAT.png)
 
 When using our VGG16 Model we generate A Confusion Matrix in which we can infer:
 
@@ -93,8 +112,25 @@ When using our VGG16 Model we generate A Confusion Matrix in which we can infer:
 ![VGCONF](Images/VGG16CONFMAT.png)
 
 When using our Xception Model we generate A confusion Matrix of:
+![XcConfMat](Images/XceptionCONFMAT.png)
 
+The confusion matrix indicates that the model performs relatively well in classifying chess pieces, with high accuracy for certain classes such as Knight (22 correctly classified) and Rook (21 correctly classified), suggesting that these classes are easier for the model to distinguish. However, there are notable misclassifications, particularly for the King, Queen, and Pawn classes, which show confusion among each other. For instance, the King is often confused with the Queen (4 misclassifications) and the Bishop (3 misclassifications). The model seems to struggle most with the Queen class, which has several misclassifications across different categories.
 
+### Bettering and Fine Tuning the Model
+Because we can observe a high case of overfitting in most of our models, we must then adjust or "Fine Tune" our model with multiple given methods to allow it to reduce it's learning rate, and more properly adapt to new images it is given, rather than perform well with training data, but poorly when put up with "real world" data. To this, we apply the methods of dropout, based on the VGG16 model for fruit classification, but instead applied to our Xception model given as this one is our best performing model. This process is considered "Regularization".[6]
+
+Dropout specifically, is a regularization technique that can help CNN resist overfitting and speed up the training process since It works by temporarily removing hidden and visible layers randomly distributed in the network, and redirecting to well-trained neurons to reduce interdependent learning in each neuron.[6]
+
+Given that we apply the dropout solution without much change, we can see better results in our Confusion matrix, but not so much on our metrics. The F1 score, Precision, Acuracy and Recall did lower. The model also displays a high difficulty in categorizing Kings, often depicting them as Queens. However, something that can be readily observed is the reduction of overfitting in the model, almost imediately. Looking at the graphs we can see that both our Validation and Test graphs now overlap each other, showing that the overfitting the model initially displayed is now gone, however this came at a cost with our remaining metrics.
+
+Despite this however, looking at our Confusion Matrix, we can see a more accurate distribution of the classification within our data, almost not messing up with any other class other than king, Indicating that the model, in theory, classifies all other classes with more accuracy.
+
+(In this phase of the project, I encountered significant challenges in locating comprehensible and applicable data to improve the model, aside from addressing overfitting or avoiding unnecessary complexity since most of the models I've chosen were already pre-trained. Consequently, I chose to utilize the model provided in the referenced article. This decision was influenced by my limited experience in the field of artificial intelligence. My primary objective at this stage is to complete my degree requirements, and I am prepared to accept any grade that results from this work even if these are inherently negative.)
+
+![DropAcc](Images/DropoutACC.png)
+![DropLos](Images/DropoutLos.png)
+![DropResu](Images/DropoutResu.png)
+![DropoutMat](Images/DropoutMat.png)
 ## References
 [1] R. Dunford "The Pareto Principle" *Plymouth*,2014 Available: https://pearl.plymouth.ac.uk/bitstream/handle/10026.1/14054/TPSS-2014-Vol7n1_140-148Dunford.pdf?sequence=1&isAllowed=y [Accessed May 17,2024]
 
