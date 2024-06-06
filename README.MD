@@ -139,8 +139,11 @@ Despite this however, looking at our Confusion Matrix, we can see a more accurat
 [3] "What Is Data Augmentation?" *Amazon Web Services*, 2024 Available: https://aws.amazon.com/what-is/data-augmentation/#:~:text=Data%20augmentation%20is%20the%20process,machine%20learning%20(ML)%20models. [Accessed May 17,2024]
 
 [4] "Tensorflow API Documentation" *Tensorflow* Available: https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator#flow_from_directory [Accessed May 17, 2024]
+
 [5] A. Badhri, K. El Moutaoikil, I. Badi, "A combined CNN and LSH for fast plant species classification" Jan 2020,Available: https://dl.acm.org/doi/10.1145/3372938.3372974 [Accessed May 27,2024]
+
 [6]A. N. Hermana, D. Rosmala, M. G. Husada,"Transfer Learning for Classification of Fruit Ripeness Using VGG16" June 2021 Available:https://dl.acm.org/doi/10.1145/3450588.3450943[Accessed May 27,2024]
+
 [7]D. Mallasen Quintana, A. A. del Barrio Garcia, M. Prieto Matias "LiveChess2FEN: a Framework for Classifying Chess Pieces based on CNNs" Dec 2020, Available:https://arxiv.org/pdf/2012.06858[Accessed May 27,2024]
 
 
